@@ -1,0 +1,154 @@
+:root {
+  --bg: #0b0b0c;
+  --fg: #ededed;
+  --muted: #8a8a8f;
+  --faint: #6a6a6f;
+  --border: #222225;
+  --card: #121214;
+  --accent: #d8d8db;
+}
+
+.slidev-layout {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  padding: 2.6rem 4rem;
+}
+
+.slidev-layout h1 {
+  color: var(--fg);
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.slidev-layout h1 + p { color: var(--muted); }
+
+.slidev-layout h2 { color: var(--fg); font-weight: 600; }
+.slidev-layout a { color: var(--fg); text-underline-offset: 3px; }
+.slidev-layout strong { color: var(--fg); font-weight: 600; }
+.slidev-layout code {
+  color: var(--fg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+
+.muted { color: var(--muted); }
+.faint { color: var(--faint); }
+
+/* title slide */
+.title {
+  font-size: 4.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+/* two-column intro list (CSS multi-column) */
+.intro-grid ul {
+  columns: 2;
+  column-gap: 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+.intro-grid li {
+  break-inside: avoid;
+  margin: 0 0 0.5rem;
+  padding-left: 0.95rem;
+  position: relative;
+  color: var(--fg);
+}
+.intro-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--faint);
+}
+
+/* minimal flat cards */
+.card-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  width: 100%;
+}
+.card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.6rem 1.4rem;
+  min-height: 9rem;
+  border-radius: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+.card .card-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
+/* tips list */
+.tips ul { list-style: none; padding: 0; margin: 1.4rem 0 0; max-width: 52rem; }
+.tips li {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin: 0.7rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+  color: #cfcfd4;
+}
+.tips li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #7aa2f7;
+  font-weight: 700;
+}
+.tips strong { color: #ededed; font-weight: 600; }
+
+/* data-slide headline */
+.headline {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--fg);
+}
+
+/* footer */
+.deck-footer {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 4rem;
+  right: 4rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
